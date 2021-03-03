@@ -3,14 +3,24 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-   // styleUrls: ['./app.component.css']
-  styles: [`
-  h3{
-    color: dodgerblue;
-  }
-  `]
+   styleUrls: ['./app.component.css']
+  // styles: [`
+  // h3{
+  //   color: dodgerblue;
+  // }
+  // `]
  })
 export class AppComponent {
   // I commented this before video-12th in section:1
   // name = 'SAM';
+  // username = '';
+  showSecret = false;
+  log = [];
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
+
+  }
 }
